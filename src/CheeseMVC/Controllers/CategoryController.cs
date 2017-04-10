@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CheeseMVC.Data;
 using CheeseMVC.Models;
 using CheeseMVC.ViewModels;
 
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace CheeseMVC.Controllers
 {
@@ -47,7 +44,7 @@ namespace CheeseMVC.Controllers
                 context.Categories.Add(newCategory);
                 context.SaveChanges();
 
-                return Redirect("/");
+                return Redirect("/Category");
             }
 
             return View(addcategoryViewModel);
